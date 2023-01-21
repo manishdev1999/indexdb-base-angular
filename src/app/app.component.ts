@@ -11,16 +11,44 @@ export class AppComponent implements OnInit {
   name = 'Angular ' + VERSION.major;
   ngOnInit(): void {
     console.log('testing IndexDB');
+  }
+  addRecord(){
     this.dbService
-      .add('cascadingFilters', {
-        profileCode: `TULH`,
-        recordCreated: `date`,
-        recordDeletion: `date`,
-        retailerCode: `TRTH`,
-        filerResponse: `{}`,
-      })
-      .subscribe((key) => {
-        console.log('key: ', key);
-      });
+    .add('cascadingFilters', {
+      profileCode: `TULH`,
+      recordCreated: `date`,
+      recordDeletion: `date`,
+      retailerCode: `TRTH`,
+      filerResponse: `{}`,
+    })
+    .subscribe((key) => {
+      console.log('key: ', key);
+    }); 
+  }
+  deleteRecord(){
+    this.dbService
+    .add('cascadingFilters', {
+      profileCode: `TULH`,
+      recordCreated: `date`,
+      recordDeletion: `date`,
+      retailerCode: `TRTH`,
+      filerResponse: `{}`,
+    })
+    .subscribe((key) => {
+      console.log('key: ', key);
+    }); 
+  }
+  updateRecord(){
+    this.dbService
+    .add('cascadingFilters', {
+      profileCode: `TULH`,
+      recordCreated: `date`,
+      recordDeletion: `date`,
+      retailerCode: `TRTH`,
+      filerResponse: `{}`,
+    })
+    .subscribe((key) => {
+      console.log('key: ', key);
+    }); 
   }
 }
